@@ -1,4 +1,3 @@
-
 #include "heroes.h"
 
 void	ft_print_random(s_roster *head)
@@ -16,7 +15,7 @@ void	ft_print_random(s_roster *head)
 	ft_putchar('\n');
 }
 
-int main(int argc, char **argv)
+int		main(void)
 {
 	s_roster	*hero;
 	s_roster	*head;
@@ -24,6 +23,7 @@ int main(int argc, char **argv)
 	char 		*line;
 	int			fd;
 	int			i;
+
 	srand(time(0));
 	fd = open("../src/name_src", O_RDONLY);
 	hero = malloc(sizeof(s_roster));

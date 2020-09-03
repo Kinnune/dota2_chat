@@ -14,16 +14,16 @@ void	print_roll(int	smaller, int bigger)
 	ft_putnbr((rand() % bigger) + 1);
 }
 
-int main(int argc, char **argv)
+int		main(int argc, char **argv)
 {
 	int	bigger;
 
+	srand(time(0));
 	if (argc != 2)
 	{
 		print_roll(1, 100);
 		return (0);
 	}
-	srand(time(0));
 	bigger = ft_atoi(*(argv + 1));
 	print_roll(1, bigger);
 	return (0);
